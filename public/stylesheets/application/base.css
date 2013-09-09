@@ -1,0 +1,121 @@
+html {
+  /*font-size: 18px;*/
+}
+
+body {
+  background-color: #fff;
+  color: #333333;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-size: 100%;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Centre stuff on the page */
+.wrapped {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 972px;;
+}
+
+/* A global rule for icon display */
+i {
+  margin-right: .3em;
+}
+
+div.clear {
+  clear: both;
+  font-size: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: .825em;
+  }
+
+  .wrapped {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body {
+    font-size: .75em;
+  }
+
+  .wrapped {
+    width: 98%;
+  }
+}
+
+img {
+  border: none;
+}
+
+a {
+  color: #003399;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #666699;
+}
+
+hr {
+  border: none;
+  clear: both;
+}
+
+h1 {
+  font-size: 1.6em;
+  line-height: 1.4em;
+  margin-bottom: .2em;
+}
+
+select {
+  font-size: 12px;
+  height: 26px;
+  /*line-height: 26px;*/
+  margin: 0 5px;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.select-mini {
+  font-size: 11px;
+  height: 20px;
+  margin: 5px 0;
+  width: 160px;
+}
+.row {
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.spinner {
+  text-align: center;
+}
+
+.btn-mini {
+  padding: 1px 3px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.clear {
+  clear: both;
+}

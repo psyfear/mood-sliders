@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProcurementRebuild</title>
+    <link rel="stylesheet" href="/stylesheets/application/reset.css" />
+    <link rel="stylesheet" href="/stylesheets/application/base.css" />
+    <link rel="stylesheet" href="/stylesheets/application/font-awesome.css" />
+    <link rel="stylesheet" href="/stylesheets/application/fonts.css" />
+    <link rel="stylesheet" href="/stylesheets/layout/header.css" />
+    <link rel="stylesheet" href="/stylesheets/layout/menu.css" />
+    <link rel="stylesheet" href="/stylesheets/layout/columns.css" />
+    <link rel="stylesheet" href="/stylesheets/layout/footer.css" />
+    <link rel="stylesheet" href="/stylesheets/layout/responsive.css" />
+    <link rel="stylesheet" href="/stylesheets/jquery/ui.totop.css" />
+    <link rel="stylesheet" href="/stylesheets/jquery/jquery-ui.css" />
+    {% block stylesheets %}{% endblock %}
+    <style>
+      #hug_slider, #hunger_slider, #fun_slider, #social_slider, #energy_slider, #comfort_slider {
+        float: left;
+        clear: left;
+        width: 500px;
+        margin: 15px;
+      }
+      .ui-slider-range { background: #ef2929; }
+      .ui-widget-content { background: green; }
+    </style>
+  </head>
+  <body>
+    <span class="wrapped">
+      {% include 'layout/_header.html' %}
+    </span>
+    {% include 'layout/_menu.html' %}
+    <span class="wrapped">
+      <div id="columns" class="{% block column_class %}{% endblock %}">
+        {% block sidebar %}{% endblock %}
+        <div id="content">
+          {% block content %}{% endblock %}
+        </div>
+        {% block aside %}{% endblock %}
+        <div class="clear"></div>
+      </div>
+    </span>
+    {% include 'layout/_footer.html' %}
+    {% include 'layout/_bottom-links.html' %}
+      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    {% block javascripts %}{% endblock %}
+    {% include 'layout/scripts/_google-tag-manager.html' %}
+  </body>
+</html>

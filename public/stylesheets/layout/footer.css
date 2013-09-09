@@ -1,0 +1,56 @@
+#footer {
+  clear: both;
+  color: #fff;
+}
+
+#footer .dark {
+  background-color: #4d4d4d;
+  padding: 0 0 2em 0;
+}
+
+#footer h5 {
+  font-size: .875em;
+  font-weight: 900;
+  margin: 0 0 2em 0;
+}
+
+#footer p {
+  font-size: .875em;
+  font-style: italic;
+  margin: 2em 0 0 0;
+  width: 80%;
+}
+
+#footer ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+#footer-main, #footer-links {
+  margin-top: 2em;
+}
+
+/* Don't show a divider in the black footer area */
+#footer-links {
+  background: none;
+}
+
+#footer-links a {
+  color: #FF9900;
+  font-size: .875em;
+}
+
+#footer .social-networking {
+  float: left;
+  margin-bottom: 3em;
+}
+
+#footer .wrapped.column-stroke {
+  background: url('<%= asset_path 'layout/stroke.jpg' %>') 0 0 repeat-x, url('<%= asset_path 'layout/stroke.jpg' %>') 67% 0 repeat-y;
+}
+
+#explore-devex h4, #follow-devex h4 {
+  color: #333;
+  font-size: 1em;
+  margin: 1em 0;
+}

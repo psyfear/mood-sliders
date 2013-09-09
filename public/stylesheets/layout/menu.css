@@ -1,0 +1,72 @@
+/* The black menu bar */
+#menu {
+  background-color: #4d4d4d;
+  font-family: 'BebasNeue';
+  text-transform: uppercase;
+}
+
+#menu-dropdown {
+  display: none;
+}
+
+/* The menu container */
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#menu li {
+  float: left;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+#menu li.current, #menu li:hover {
+  background: transparent url(/images/layout/menu-current.jpg) repeat-x;
+}
+
+#menu a {
+  color: #f8f8f8;
+  cursor: pointer;
+  font-size: 1.4em;
+  font-weight: 100;
+  line-height: 2.4em;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+/*
+ * Dropdown menu area
+ */
+ul#dropdown {
+  background-color: #4d4d4d;
+  list-style-type: none;
+  margin: 0 0 0 0;
+  position: absolute;
+}
+
+ul#dropdown li {
+  clear: left;
+  display: block;
+}
+
+/*
+ * Responsive
+ */
+@media only screen and (max-width: 768px) {
+  #dropdown {
+    display: none;
+  }
+
+  #menu-dropdown {
+    display: block;
+  }
+
+  #menu-horizontal {
+    display: none;
+  }
+}

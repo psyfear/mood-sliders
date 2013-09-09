@@ -1,0 +1,10 @@
+node_modules/
+config/database.js
+config/redis.js
+config/deploy.rb
+config/nginx.development.conf
+log/*
+*.geany
+Capfile
+notifier.js
+

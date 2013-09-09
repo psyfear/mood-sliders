@@ -1,0 +1,73 @@
+#content, #aside, #sidebar, .column {
+  float: left;
+}
+
+#content, #aside, #sidebar {
+  padding: 1em 0;
+}
+
+#content {
+  width: 100%;
+}
+
+#aside {
+  padding-left: 2%;
+  width: 33%;
+}
+
+#sidebar {
+  padding-right: 2%;
+  width: 20%;
+}
+
+/* Adjust the content to cater for sidebar and/or aside */
+.with-aside.with-sidebar #content {
+  width: 47%;
+}
+
+.with-aside #content {
+  padding-right: 2%;
+  width: 67%;
+}
+
+.with-sidebar #content {
+  padding-left: 2%;
+  width: 80%;
+}
+
+/* The columns are wrapped in div#columns
+ * This is so that the strokes follow the longest column on the page, be it the sidebar, content or aside
+ */
+#columns.with-sidebar, #columns.with-aside {
+  background-image: url(/images/layout/stroke.jpg);
+  background-repeat: repeat-y;
+}
+
+#columns.with-sidebar {
+  background-position: 20% 0; 
+}
+
+#columns.with-aside {
+  background-position: 67% 0; 
+}
+
+#columns.with-sidebar.with-aside {
+  background: url(/images/layout/stroke.jpg' %>') 20% 0 repeat-y, url(/images/layout/stroke.jpg) 67% 0 repeat-y;
+}
+
+/* These are for the footer columns */
+.column.wide {
+  width: 67%;
+}
+
+.column.narrow {
+  width: 33%;
+}
+
+.column.left {
+  padding-right: 2%;
+}
+
+.column.right {
+  padding-left: 2%;
+}

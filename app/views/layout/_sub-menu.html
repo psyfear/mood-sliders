@@ -1,0 +1,35 @@
+<% for sub_nav_tab in SubNavTab.displayable.reject{|t| !t.active } %>
+  <ol id="<%= sub_nav_tab.section.downcase %>-sub" class="submenu" style="display:none">
+    <li class="left">
+      <ul>
+        <% for link in sub_nav_tab.left_column_links %>
+          <li><%= link_to link.text, link.url(request) %></li>
+        <% end %>
+      </ul>
+    </li>
+    <li class="middle">
+      <% unless sub_nav_tab.center_column_header.blank? %>
+        <h2 class="l-text"><%= sub_nav_tab.center_column_header %></h2>
+      <% end %>
+      <ul>
+        <% for link in sub_nav_tab.center_column_links %>
+          <li><%= link_to link.text, link.url(request) %></li>
+        <% end %>
+      </ul>
+    </li>
+    <li class="right">
+      <ul>
+        <% if sub_nav_tab.featured_article.andand.article %>
+          <li>
+            <div class="nav-item-header"><%= strip_html(sub_nav_tab.featured_article.overline) %></div>
+            <%= image_tag auto_wrap_https_link(sub_nav_tab.featured_article.default_image_url(:thumb_89)), :class => "l-float" if sub_nav_tab.featured_article.default_image_url(:thumb_89) %>
+            <div class="article-text">
+              <p><%= link_to sub_nav_tab.featured_article.title, article_path(I18n.locale, sub_nav_tab.featured_article.article) %></p>
+              <p class="normal-weight"><%= sub_nav_tab.featured_article.teaser %></p>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+  </ol>
+<% end %>

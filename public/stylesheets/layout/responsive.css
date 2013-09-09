@@ -1,0 +1,47 @@
+@media only screen and (min-width: 1400px) {
+  body {
+    font-size: 100%;
+  }
+}
+
+/* Responsive */
+@media only screen and (max-width: 767px) {
+  .wrapped {
+    margin: 0 5%;
+    width: 95%;
+  }
+
+  .column {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .column.right {
+    background: none;
+  }
+}
+
+/* Breakpoint more room for 3 in a row links */
+@media only screen and (max-width: 479px) {
+  .wrapped {
+    margin: 0 1%;
+    width: 98%;
+  }
+
+  #content, #aside, #sidebar {
+    margin: 0;
+    padding: .5em !important;
+    width: 100% !important;
+  }
+
+  #column-strokes {
+    background: none !important;
+  }  
+}
+
+/* Breakpoint to make articles single column rather than double */
+@media only screen and (max-width: 320px) {
+  #footer-main, #footer-links {
+    width: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+upstream node_procurements_server {
+  # This socket should match the one configured in config/unicorn.rb in your local Neo2 repo
+  # server unix:/Users/mark.selby/Devex/Repos/neo2/tmp/sockets/unicorn.sock # For reference
+
+  server localhost:3005 fail_timeout=0;
+}
+
+server {
+  listen 80;
+  server_name node-procurements.localhost;
+
+  # Should we ever be letting people upload more than this?
+  client_max_body_size 500K;
+
+  # I run Neo as http://neo.localhost
+  # thus Impact as http://neo.localhost/impact
+  # for local dev on my machine
+  # server_name neo.localhost;
+
+  keepalive_timeout 5;
+
+  # Don't forget to change these to point to your neo2 repo or wherever you want Nginx to log to
+  access_log  /Users/mark.selby/Devex/Apps/node-procurements/log/nginx_access.log;
+  error_log   /Users/mark.selby/Devex/Apps/node-procurements/log/nginx_error.log;
+
+  # Location of our static files
+  root /Users/mark.selby/Devex/Apps/node-procurements/public;
+
+  location / {
+    # Call the backend if it's not a static file and 404 if we can't find it anywhere
+    try_files $uri @node_procurements_backend; # =404; # /404.html;
+  }
+
+  location @node_procurements_backend {
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+    proxy_pass http://node_procurements_server;
+
+    # This is handy for development, to see in browser headers what's going on
+    add_header  From-Cache No;
+    break;
+  }
+
+}

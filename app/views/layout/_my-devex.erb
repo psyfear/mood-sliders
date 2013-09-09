@@ -1,0 +1,18 @@
+<div id="my-devex" ng-controller="MyDevexCtrl">
+  <div class="wrapper">
+    <ul>
+      <li>
+        <ul id="my-devex-links">
+          <li class="first">
+            <a id="welcome" href="/en/my_devex/welcome">Welcome user.first_name !</a>
+          </li>
+          <li ng-repeat="link in links">
+            <a id="{{ link.id }}" href="{{ link.url }}">{{ link.text }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <a href="https://www.devex.com/en" class="site active">devex.com</a>
+    <a href="https://www.devex.com/impact" class="site">devex <i>impact</i></a>
+  </div>
+</div>

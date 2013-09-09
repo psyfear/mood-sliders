@@ -1,0 +1,60 @@
+#summary {
+}
+
+#summary h1 {
+  color: #666;
+  font-size: 1.25em;
+}
+
+#summary p {
+  margin: 1em 0;
+}
+
+#summary ol {
+  border: 1px solid #ccc;
+  border-left: none;
+  margin: 1em 0;
+}
+
+#summary ol li {
+  border-left: 1px solid #ccc;
+  display: table-cell;
+  padding: .2em .5em;
+}
+
+#summary .deadline {
+  color: #009900;
+  font-weight: 900;
+  text-align: left;
+}
+
+#summary .opportunity-size {
+  text-align: right;
+}
+
+.opportunity-size table {
+  float: right;
+}
+
+#summary .status {
+  width: 20%;
+}
+
+#summary em {
+  font-style: normal;
+}
+
+#summary .status span {
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background: #e5f3e6;
+  line-height: 2;
+  margin: .1em;
+  padding: .2em .5em;
+}
+
+#summary .updates-link {
+  display: block;
+  margin: 1em 0;
+}
+

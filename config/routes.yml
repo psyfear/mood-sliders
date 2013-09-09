@@ -1,0 +1,3 @@
+- { path: '/mood/sliders', method: get, action: 'Mood.sliders' }
+- { path: '/set/sliders', method: post, action: 'Mood.set_sliders' }
+- { path: '/get/sliders', method: get, action: 'Mood.get_sliders' }
