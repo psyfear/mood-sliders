@@ -76,8 +76,7 @@ if (cluster.isMaster) {
     root: viewDir,
     allowErrors: true,
     cache: false,
-    encoding: 'utf8',
-    filters: require('./lib/filters/devex')
+    encoding: 'utf8'
   });
 
   app.set('views', viewDir);
