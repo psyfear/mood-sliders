@@ -39,7 +39,6 @@ if (cluster.isMaster) {
   // Start the server.
 
   var os = require('os');
-  var TwitterStrategy = require('passport-twitter').Strategy;
   var express = require('express');
 
   var users = [];
