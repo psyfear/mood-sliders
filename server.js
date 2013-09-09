@@ -37,7 +37,6 @@ if (cluster.isMaster) {
   }
 } else {
   // Start the server.
-  var passport = global.passport = require('passport');
 
   var os = require('os');
   var TwitterStrategy = require('passport-twitter').Strategy;
