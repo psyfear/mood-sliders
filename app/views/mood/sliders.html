@@ -17,16 +17,16 @@
         range: "max",
         max: 1000,
         value: 0,
+        step: 50,
         slide: refreshSliders,
         change: refreshSliders
+      }).sliderAccess({
+        touchonly : false,
+        where: 'after',
+        upText: '+',
+        downText: '-'
       });
 
-      $('#basic_example_3').slider().sliderAccess({
-        touchonly : false,
-        text: true,
-        upText: 'More',
-        downText: 'Less'
-      });
       $( "#hug_slider" ).slider( "value", {{hug_slider}} );
       $( "#hunger_slider" ).slider( "value", {{hunger_slider}} );
       $( "#fun_slider" ).slider( "value", {{fun_slider}} );

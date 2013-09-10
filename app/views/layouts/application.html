@@ -11,10 +11,18 @@
     <link rel="stylesheet" href="/stylesheets/layout/columns.css" />
     <link rel="stylesheet" href="/stylesheets/layout/footer.css" />
     <link rel="stylesheet" href="/stylesheets/layout/responsive.css" />
-    <link rel="stylesheet" href="/stylesheets/jquery/ui.totop.css" />
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="/stylesheets/jquery-ui.min.css" />
     {% block stylesheets %}{% endblock %}
-
+    <style>
+      #hug_slider, #hunger_slider, #fun_slider, #social_slider, #energy_slider, #comfort_slider {
+        float: left;
+        clear: left;
+        width: 500px;
+        margin: 15px;
+      }
+      .ui-slider-range { background: #ef2929; }
+      .ui-widget-content { background: green; }
+    </style>
   </head>
   <body>
     <span class="wrapped">
@@ -33,8 +41,8 @@
     </span>
     {% include 'layout/_footer.html' %}
     {% include 'layout/_bottom-links.html' %}
-      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-      <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+      <script src="/javascripts/jquery.js"></script>
+      <script src="/javascripts/jquery-ui.js"></script>
       <script src="/javascripts/jquery-ui-sliderAccess.js"></script>
     {% block javascripts %}{% endblock %}
     {% include 'layout/scripts/_google-tag-manager.html' %}
