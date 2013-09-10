@@ -19,6 +19,11 @@
         value: 0,
         slide: refreshSliders,
         change: refreshSliders
+      }).sliderAccess({
+        touchonly : false,
+        text: true,
+        upText: 'More',
+        downText: 'Less'
       });
       $( "#hug_slider" ).slider( "value", {{hug_slider}} );
       $( "#hunger_slider" ).slider( "value", {{hunger_slider}} );
