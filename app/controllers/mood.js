@@ -128,5 +128,22 @@ module.exports = {
         res.json({slider_key:value});
       }
     });
+  },
+  decrement_hunger_slider: function (req, res) {
+    global.redisClient.get('hunger_slider', function(err, value) {
+      if (err) {
+        console.error("error" + err);
+      } else {
+        console.log('value:' + value);
+        global.redisClient.set('hunger_slider', parseInt(value) - 42, function(err) {
+          if (err) {
+            console.error("error");
+          } else {
+            res.json({'ok':true});
+          }
+        });
+      }
+    });
+
   }
 };

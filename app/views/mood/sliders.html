@@ -12,7 +12,7 @@
   <script>
 
     $(function() {
-      $( "#hug_slider, #hunger_slider, #fun_slider, #social_slider, #energy_slider, #comfort_slider" ).slider({
+      $('div[id$="slider"]').slider({
         orientation: "horizontal",
         range: "max",
         max: 1000,
@@ -36,34 +36,22 @@
 
       function refreshSliders() {
         var hug_slider_value = $( "#hug_slider" ).slider( "value" );
-        $.post('/set/sliders?slider_key=hug_slider' + '&slider_value=' + hug_slider_value, function(data) {
-          $('.result').html(data);
-        });
+        $.post('/set/sliders?slider_key=hug_slider&slider_value=' + hug_slider_value);
 
         var hunger_slider = $( "#hunger_slider" ).slider( "value" );
-        $.post('/set/sliders?slider_key=hunger_slider' + '&slider_value=' + hunger_slider, function(data) {
-          $('.result').html(data);
-        });
+        $.post('/set/sliders?slider_key=hunger_slider&slider_value=' + hunger_slider);
 
         var fun_slider = $( "#fun_slider" ).slider( "value" );
-        $.post('/set/sliders?slider_key=fun_slider' + '&slider_value=' + fun_slider, function(data) {
-          $('.result').html(data);
-        });
+        $.post('/set/sliders?slider_key=fun_slider&slider_value=' + fun_slider);
 
         var social_slider = $( "#social_slider" ).slider( "value" );
-        $.post('/set/sliders?slider_key=social_slider' + '&slider_value=' + social_slider, function(data) {
-          $('.result').html(data);
-        });
+        $.post('/set/sliders?slider_key=social_slider&slider_value=' + social_slider);
 
         var energy_slider = $( "#energy_slider" ).slider( "value" );
-        $.post('/set/sliders?slider_key=energy_slider' + '&slider_value=' + energy_slider, function(data) {
-          $('.result').html(data);
-        });
+        $.post('/set/sliders?slider_key=energy_slider&slider_value=' + energy_slider);
 
         var comfort_slider = $( "#comfort_slider" ).slider( "value" );
-        $.post('/set/sliders?slider_key=comfort_slider' + '&slider_value=' + comfort_slider, function(data) {
-          $('.result').html(data);
-        });
+        $.post('/set/sliders?slider_key=comfort_slider&slider_value=' + comfort_slider);
       }
     });
   </script>
