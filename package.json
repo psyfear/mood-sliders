@@ -37,7 +37,7 @@
     "assets-packager": "latest",
     "consolidate": "latest",
     "express": "3.x",
-    "grunt": "~0.4.1",
+    "grunt": "~1.0.4",
     "grunt-cli": ">= 0",
     "hiredis": "latest",
     "js-yaml": ">= 0",
