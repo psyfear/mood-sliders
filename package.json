@@ -27,7 +27,9 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt nodeunit"
+    "test": "grunt nodeunit",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "api-builder": ">= 0",
@@ -47,7 +49,8 @@
     "sol-redis-pool": ">= 0",
     "structures": ">= 0",
     "swig": "= 0.14.0",
-    "underscore.string": ">= 0"
+    "underscore.string": ">= 0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "nodeunit": ">= 0",
@@ -55,5 +58,6 @@
     "grunt-contrib-nodeunit": "~0.1.2",
     "grunt-contrib-watch": "~0.2.0"
   },
-  "keywords": []
+  "keywords": [],
+  "snyk": true
 }
