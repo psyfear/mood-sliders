@@ -36,7 +36,7 @@
     "async": "~0.2.9",
     "assets-packager": "latest",
     "consolidate": "latest",
-    "express": "3.x",
+    "express": "4.0.0",
     "grunt": "~0.4.1",
     "grunt-cli": ">= 0",
     "hiredis": "latest",
